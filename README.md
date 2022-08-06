@@ -14,7 +14,7 @@ Adding a mod (method 1):
 1. Double-Click the 'click_to_merge.bat' program (in the addon folder )
 1. Deploy to device (if necessary)
 
-# ORIGINAL README
+<details> <summary># ORIGINAL README</summary>
 An Alternate addon system for SWBF (2004) and SWBFII (2005).
 Useful for the console versions of the games (but could be used on the PC files also).
 
@@ -36,6 +36,8 @@ Adding a mod:
 ## Videos (YouTube)
 * [Porting XBOX Addon to Alt Addon System and DLC package](https://youtu.be/LVhKMDW22AY)
 * [Alt Addon system with AnthonyBF2's PSP mod](https://youtu.be/HyGFpVQ9VHQ)
+
+</details>	
 
 <details> <summary>More info for modders</summary>
 
