@@ -3,16 +3,25 @@ New mission.lvl has stubs added (see AltAddon_GenerateStubs.ps1 to generate new 
 
 This allows end users to add new map addons to their unpacked PSP SWBF2 game without requiring a Windows PC to execute MissionMerge.exe.
 
-## Initial setup (method 1):
+## Initial setup 
+(method 1 - PSP only):
+1. Place the 'addon' folder under your usrdir/data/_lvl_psp/ directory.
+2. Backup the following files in _lvl_psp/ to _lvl_psp/backup (if the 'backup' folder does not exist, create it):
+ a. core.lvl, mission.lvl, shell.lvl, ingame.lvl
+3. Copy core.lvl, mission.lvl, shell.lvl, and ingame.lvl from _lvl_psp/addon/updated/ to _lvl_psp/
+4. Move the 'initial_setup_'.bat' files to the 'addon/bin/' folder (to de-clutter the 'addon' folder).
+
+(method 2):
 1. Place the 'addon' folder under the '_LVL_platform' (PS2|PSP|XBOX) folder for the game you want to mod.
-1. Run the 'initial_setup_PS2.bat', 'initial_setup_PSP.bat' or 'initial_setup_XBOX.bat' file.
-1. Move the 'initial_setup_'.bat' files to the 'addon\\bin\\' folder (to de-clutter the 'addon' folder).
+2. Run the 'initial_setup_PS2.bat', 'initial_setup_PSP.bat' or 'initial_setup_XBOX.bat' file.
+3. Move the 'initial_setup_'.bat' files to the 'addon/bin/' folder (to de-clutter the 'addon' folder).
 
-
-Adding a mod (method 1):
-1. Drop the mod in the addon folder (a folder from '001' - '999' )
-1. Double-Click the 'click_to_merge.bat' program (in the addon folder )
-1. Deploy to device (if necessary)
+## Adding a mod 
+1. Drop the mod in the addon folder (a folder from '001' - '999' ).
+2. (optional) run 'click_to_merge.bat' in _lvl_psp/addon/ if the mod you just installed mentions requiring this. NOTE: This *will* require a Windows PC to run.
+3. (optional) compile your ISO, if you prefer to do so or your method of play requires it
+4. (optional) deploy to device you intend to play on
+5. Play the game!
 
 <details> <summary># ORIGINAL README</summary>
 An Alternate addon system for SWBF (2004) and SWBFII (2005).
@@ -28,7 +37,7 @@ It is meant to be a 'Drop and Click' process (after initial setup).
 1. Move the 'initial_setup_'.bat' files to the 'addon\\bin\\' folder (to de-clutter the 'addon' folder).
 
 
-Adding a mod:
+## Adding a mod:
 1. Drop the mod in the addon folder (a folder from '001' - '999' )
 1. Double-Click the 'click_to_merge.bat' program (in the addon folder )
 1. Deploy to device (if necessary)
@@ -42,8 +51,9 @@ Adding a mod:
 <details> <summary>More info for modders</summary>
 
 ### This addon system does the following:
-* Updates 'mission.lvl' to include the 'alternate addon' missions (folders '000-999').
-* Updates 'core.lvl' to contain the strings from the 'alternate addon' mods (folders '000-999').
+* Updates 'mission.lvl' to include the 'alternate addon' missions (folders '000-999'). (requires click_to_merge.bat)
+* Updates 'mission.lvl' to include the 'alternate addon' mission stubs (folders '000-064').
+* Updates 'core.lvl' to contain the strings from the 'alternate addon' mods (folders '000-999'). (requires click_to_merge.bat)
 
 ### This addon system enables the following:
 * Easy overriding of scripts used in shell.lvl and ingame.lvl.
