@@ -18,7 +18,9 @@ if not exist BASE.CORE.LVL (
 	echo Create Base.core.lvl and base.mission.lvl 
 	:: setup for alt addon system 
 	copy ..\CORE.lvl BASE.CORE.LVL 
-	copy ..\MISSION.LVL BASE.MISSION.LVL 
+	copy updated\MISSION.LVL BASE.MISSION.LVL 
+	:: copy the updated mission.lvl to _LVL_PSP
+	copy BASE.MISSION.LVL ..\mission.lvl
 
 	:: Copy the shell to the right place 
 	copy SHELL\PSP\SHELL.LVL ..
