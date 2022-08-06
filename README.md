@@ -1,4 +1,20 @@
-# AltAddonSystem
+# AltAddonSystem PSP Update
+New mission.lvl has stubs added (see AltAddon_GenerateStubs.ps1 to generate new stubs) numbered 000c_con and 000g_con through to 064c_con and 064g_con (this is arbitrary). These stubs don't contain any LUA scripting besides pointing the LUA environment to search for, read in, and execute actual script files (compiled .lua files named XXXy_con_actual.script) located in the respective _lvl_psp/addon/xxx folders. 
+
+This allows end users to add new map addons to their unpacked PSP SWBF2 game without requiring a Windows PC to execute MissionMerge.exe.
+
+## Initial setup (method 1):
+1. Place the 'addon' folder under the '_LVL_platform' (PS2|PSP|XBOX) folder for the game you want to mod.
+1. Run the 'initial_setup_PS2.bat', 'initial_setup_PSP.bat' or 'initial_setup_XBOX.bat' file.
+1. Move the 'initial_setup_'.bat' files to the 'addon\\bin\\' folder (to de-clutter the 'addon' folder).
+
+
+Adding a mod (method 1):
+1. Drop the mod in the addon folder (a folder from '001' - '999' )
+1. Double-Click the 'click_to_merge.bat' program (in the addon folder )
+1. Deploy to device (if necessary)
+
+# ORIGINAL README
 An Alternate addon system for SWBF (2004) and SWBFII (2005).
 Useful for the console versions of the games (but could be used on the PC files also).
 
